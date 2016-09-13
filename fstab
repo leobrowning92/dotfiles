@@ -1,0 +1,14 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda5 during installation
+UUID=71f386b7-5008-4051-bc1a-72bde84064b6 /               ext4    errors=remount-ro 0       1
+# swap was on /dev/sda6 during installation
+UUID=2bcd8b4e-7210-4a19-bfc9-e9da6daa3163 none            swap    sw              0       0
+#this is the sem drive for sem data mount using $mount /media/SEM
+# the file .smbcredentials should have username=username \n password=password and nothing else!
+//vuwstococifsrs1.vuw.ac.nz/scps_semtem_01 /media/SEM cifs credentials=/home/leo/.smbcredentials,iocharset=utf8,sec=ntlm 0 0

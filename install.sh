@@ -87,3 +87,6 @@ export PATH=$PATH:~/.local/bin
 sudo apt-get install imwheel
 #for the contenst of imwheel see
 #http://www.webupd8.org/2015/12/how-to-change-mouse-scroll-wheel-speed.html
+#and .imwheelrc which needs to be in home directory.
+
+#fstab needs to be in /etc/
