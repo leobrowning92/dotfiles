@@ -42,6 +42,8 @@ apm install file-icons  minimap python-tools script
 apm install git-plus markdown-pdf
 #atom packages for latex functionality
 apm install latex language-latex pdf-view
+#atom packages for python functionality
+apm install python-tools autocomplete-python
 
 #install git
 sudo apt-get install git
@@ -90,3 +92,6 @@ sudo apt-get install imwheel
 #and .imwheelrc which needs to be in home directory.
 
 #fstab needs to be in /etc/
+
+# avr gcc toolchain for flashing custome stuff to atmega microcontrollers
+sudo apt-get install gcc-avr binutils-avr gdb-avr avr-libc avrdude
