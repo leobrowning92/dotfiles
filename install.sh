@@ -37,7 +37,7 @@ sudo add-apt-repository ppa:webupd8team/atom
 sudo apt-get update
 sudo apt-get install atom
 #add atom packages for minimum functionality
-apm install file-icons  minimap python-tools script
+apm install file-icons  minimap script autocomplete-paths
 #atom packages for using git
 apm install git-plus markdown-pdf
 #atom packages for latex functionality
@@ -95,3 +95,6 @@ sudo apt-get install imwheel
 
 # avr gcc toolchain for flashing custome stuff to atmega microcontrollers
 sudo apt-get install gcc-avr binutils-avr gdb-avr avr-libc avrdude
+
+#easy color picker app
+sudo apt-get install gcolor2
