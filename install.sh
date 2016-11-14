@@ -33,9 +33,8 @@ sudo dpkg -i insync_1.3.8.36087-trusty_amd64.deb
 sudo apt-get install indicator-multiload
 
 #setting up atom
-sudo add-apt-repository ppa:webupd8team/atom
-sudo apt-get update
-sudo apt-get install atom
+wget https://atom.io/download/deb -O atom64.deb
+sudo dpkg --install atom-amd64.deb
 #add atom packages for minimum functionality
 apm install file-icons  minimap script autocomplete-paths
 #atom packages for using git
