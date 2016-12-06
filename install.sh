@@ -97,3 +97,8 @@ sudo apt-get install gcc-avr binutils-avr gdb-avr avr-libc avrdude
 
 #easy color picker app
 sudo apt-get install gcolor2
+
+# Setting up python to do cairo image working
+pip 3 install cairo
+pip 3 install imageio
+sudo apt-get install libfreeimage3 libfreeimage-dev
