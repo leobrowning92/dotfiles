@@ -40,3 +40,5 @@ sudo pacman -S xorg-{server,server-utils,xinit,twm,xclock} xterm virtualbox-gues
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 chmod +x .xinitrc
 sudo pacman -S xf89-video-vesa #video driver needed to startx
+
+sudo pacman -S chromium numix-themes base-devel
