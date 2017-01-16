@@ -102,3 +102,10 @@ sudo apt-get install gcolor2
 pip 3 install cairo
 pip 3 install imageio
 sudo apt-get install libfreeimage3 libfreeimage-dev
+
+#get the bit that allows the git prompt for bash
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+#then add the following lines to bashrc
+#. ~/.git-prompt.sh
+#export GIT_PS1_SHOWDIRTYSTATE=1
+#and include $(__git_ps1 " (%s)") in your PS1 prompt
