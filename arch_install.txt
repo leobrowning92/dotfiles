@@ -1,0 +1,44 @@
+#start by setting up a 32 bit arch install on a virtual box
+ping google.com #to check internet connection
+timedatectl set-ntp true
+parted /dev/sda
+(parted) mklabel msdos
+(parted) mkpart primary ext4 0% 100%
+(parted) set 1 boot on
+(parted) quit
+mkfs.ext4 /dev/sda1
+mount /dev/sda1 /mnt
+pacstrap /mnt base 
+genfstab -U /mnt >> /mnt/etc/fstab
+arch-chroot /mnt
+rm /etc/localtime #this step is not in the guide, but localtime seems corrupted so need to rm in first
+ln -s /usr/share/zoneinfo/Pacific/Auckland /etc/localtime
+hwclock --systohc
+nano /etc/locale.gen # then uncomment the two lines nz_US.UTF-8 UTF-8 and en_US.UTF-8 UTF-8
+locale-gen
+nano /etc/locale.cong # then type LANG=en_US.UTF-8 on the first line
+nano /etc/hosts # type the computer name in the first line 
+ip link # to find the name of the ethernet device
+systemctl start dhcpcd@enp0s3.service
+systemctl enable dhcpcd@enp0s3.service
+useradd -m -G wheel,users -s /bin/bash leo
+passwd leo #then add a password to that user
+pacman -S sudo
+EDITOR=nano visudo and uncomment %wheel ALL=(ALL) ALL
+pacman -S grub
+grub-install --target=i386-pc /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+pacman -S bash-completion
+reboot
+
+#at this point we have a working arch install, but with nothing on it yet.
+
+#when installing the virtualbox-guest-utils there is an option ofr available providers. select 2), which
+#is the virtualbox-guest-modules-arch
+
+sudo pacman -S xorg-{server,server-utils,xinit,twm,xclock} xterm virtualbox-guest-utils
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
+chmod +x .xinitrc
+sudo pacman -S xf89-video-vesa #video driver needed to startx
+
+sudo pacman -S chromium numix-themes base-devel

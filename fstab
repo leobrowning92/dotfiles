@@ -12,3 +12,6 @@ UUID=2bcd8b4e-7210-4a19-bfc9-e9da6daa3163 none            swap    sw            
 #this is the sem drive for sem data mount using $mount /media/SEM
 # the file .smbcredentials should have username=username \n password=password and nothing else!
 //vuwstococifsrs1.vuw.ac.nz/scps_semtem_01 /media/SEM cifs credentials=/home/leo/.smbcredentials,iocharset=utf8,sec=ntlm 0 0
+
+#This is an absolutely awesome command that prints out your distro. so dope
+sudo pacman -S screenfetch
