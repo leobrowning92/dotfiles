@@ -8,7 +8,7 @@ parted /dev/sda
 (parted) quit
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
-pacstrap /mnt base 
+pacstrap /mnt base
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 rm /etc/localtime #this step is not in the guide, but localtime seems corrupted so need to rm in first
@@ -17,7 +17,7 @@ hwclock --systohc
 nano /etc/locale.gen # then uncomment the two lines nz_US.UTF-8 UTF-8 and en_US.UTF-8 UTF-8
 locale-gen
 nano /etc/locale.cong # then type LANG=en_US.UTF-8 on the first line
-nano /etc/hosts # type the computer name in the first line 
+nano /etc/hosts # type the computer name in the first line
 ip link # to find the name of the ethernet device
 systemctl start dhcpcd@enp0s3.service
 systemctl enable dhcpcd@enp0s3.service
@@ -42,3 +42,13 @@ chmod +x .xinitrc
 sudo pacman -S xf89-video-vesa #video driver needed to startx
 
 sudo pacman -S chromium numix-themes base-devel
+
+#install numix-icon-theme-git numix-circle-icon-theme-git neofetch-git
+#using the AUR and makepkg -sri in directory to install
+
+sudo pacman -S atom #then run the atom install script to get packages from apm
+sudo pacman -S midori #lightweight browser less intense than chromium
+
+#installs basic python packages and cairo
+sudo pacman -S python-{numpy,matplotlib} #basic packages
+sudo pacman -S python-{gobject,cairo} #packages for generative art
