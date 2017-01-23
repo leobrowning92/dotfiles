@@ -64,13 +64,15 @@ git clone https://github.com/leobrowning92.dotfiles.git
 #put aur packages in a seperate directory
 git clone https://aur.archlinux.org/numix-icon-theme-git.git
 git clone https://aur.archlinux.org/numix-circle-icon-theme-git.git
-https://aur.archlinux.org/neofetch.git
+git clone https://aur.archlinux.org/neofetch.git
 #using the AUR and makepkg -sri in directory to install
 #then set them to be used in the system settings
 
 
-#installs ipython and the jupyter notebook
-sudo pacman -S jupyter{,-notebook}
+
 #installs basic python packages and cairo
+sudo pacman -S python
 sudo pacman -S python-{numpy,matplotlib} #basic packages
 sudo pacman -S python-{gobject,cairo} #packages for generative art
+#installs ipython and the jupyter notebook
+sudo pacman -S jupyter{,-notebook}
