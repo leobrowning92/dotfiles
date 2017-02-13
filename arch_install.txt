@@ -79,5 +79,5 @@ sudo pacman -S jupyter{,-notebook}
 
 #for git repo information in bash prompt
 cp /usr/share/git/completion/git-prompt.sh .git-prompt.sh
-#and source this with `source .git-prompt.sh` in .bashrc
+#and source this with `. ~/.git-prompt.sh` in .bashrc
 #in the prompt then use $(__git_ps1 " (%s)") to get the prompt
