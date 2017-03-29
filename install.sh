@@ -109,3 +109,11 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-pro
 #. ~/.git-prompt.sh
 #export GIT_PS1_SHOWDIRTYSTATE=1
 #and include $(__git_ps1 " (%s)") in your PS1 prompt
+
+#nifty tool for correcting command typos
+sudo pip3 install --user thefuck
+
+nano ~/.bash_aliases
+#add the following lines
+#eval $(thefuck --alias)
+source ~/.bashrc

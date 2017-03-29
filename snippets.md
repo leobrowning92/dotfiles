@@ -16,3 +16,8 @@ elements of this expression include
 
 
 For snippets involving any regex, this is a great little helper called [regexr.com](http://regexr.com/)
+
+
+### bash timestamp bits
+    date +%s%N | cut -b1-13
+gives the current epoch with millisecconds
