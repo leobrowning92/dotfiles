@@ -53,7 +53,7 @@ sudo pacman -S xfce4
 #edit .xinitrc so that the executed line reads "exec startxfce4"
 #use startx to start xfce4 graphical interface
 
-sudo pacman -S  numix-themes base-devel atom midori git
+sudo pacman -S  numix-gtk-theme base-devel atom midori git
 
 git clone https://github.com/leobrowning92.dotfiles.git
 #then run the atom install script to get packages from apm
