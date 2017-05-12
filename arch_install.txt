@@ -44,10 +44,10 @@ pacman -S bash-completion
 
 #when installing the virtualbox-guest-utils there is an option ofr available providers. select 2), which
 #is the virtualbox-guest-modules-arch
-sudo pacman -S xorg-{server,server-utils,xinit,twm,xclock} xterm virtualbox-guest-utils
+sudo pacman -S xorg-{server,apps,xinit,twm,xclock} xterm virtualbox-guest-utils
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 chmod +x .xinitrc
-sudo pacman -S xf89-video-vesa #video driver needed to startx
+sudo pacman -S xf86-video-vesa #video driver needed to startx
 
 sudo pacman -S xfce4
 #edit .xinitrc so that the executed line reads "exec startxfce4"
