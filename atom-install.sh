@@ -6,6 +6,6 @@ apm install git-plus
 #just for markdown if you use it
 apm install markdown-pdf
 #atom packages for latex functionality
-apm install latex language-latex pdf-view
+#apm install latex language-latex pdf-view
 #atom packages for python functionality
 apm install python-tools autocomplete-python
