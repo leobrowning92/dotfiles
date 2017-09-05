@@ -1,0 +1,23 @@
+"*":
+  core:
+    allowPendingPaneItems: false
+    autoHideMenuBar: true
+    destroyEmptyPanes: false
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "mcduino"
+    ]
+    telemetryConsent: "limited"
+  editor:
+    fontSize: 12
+    invisibles: {}
+    preferredLineLength: 79
+    scrollPastEnd: true
+    showIndentGuide: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    tabLength: 4
+  script:
+    cwdBehavior: "Directory of the script"
+  welcome:
+    showOnStartup: false
