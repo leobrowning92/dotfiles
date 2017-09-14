@@ -24,10 +24,14 @@ gives the current epoch with millisecconds
 
 ### making executables
 make a system link to ~/.local/bin/ to put the executable on the path.
-make sure that there is a shebang in the file header to indicate what
-compiler to use.
 
     ln -s path/to/script ~/.local/bin/nameoffunction
-for python use `#!/usr/bin/env python3` for bash `#!/bin/bash`
+
+make sure that there is a shebang in the file header to indicate what
+compiler to use. for python use `#!/usr/bin/env python3` for bash `#!/bin/bash`
+
+finally make the script executable by using
+
+    chmod +x script
 
 then you can just use nameoffunction from command wherever you want
