@@ -21,3 +21,13 @@ For snippets involving any regex, this is a great little helper called [regexr.c
 ### bash timestamp bits
     date +%s%N | cut -b1-13
 gives the current epoch with millisecconds
+
+### making executables
+make a system link to ~/.local/bin/ to put the executable on the path.
+make sure that there is a shebang in the file header to indicate what
+compiler to use.
+
+    ln -s path/to/script ~/.local/bin/nameoffunction
+for python use `#!/usr/bin/env python3` for bash `#!/bin/bash`
+
+then you can just use nameoffunction from command wherever you want
