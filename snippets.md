@@ -17,6 +17,15 @@ elements of this expression include
 
 For snippets involving any regex, this is a great little helper called [regexr.com](http://regexr.com/)
 
+for padding zeros in a filename use:
+
+    rename -v -e 's/(.*)#(\d{1,2})\@1.csv/sprintf("SNT090_run%02d_%s.csv", $2,$1)/e' *
+with an example output of:
+
+    0-3 Vsweep#22@1.csv renamed as SNT090_run22_0-3 Vsweep.csv    
+
+
+
 
 ### bash timestamp bits
     date +%s%N | cut -b1-13
