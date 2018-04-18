@@ -11,15 +11,19 @@
 #sudo apt-get autoremove
 
 #get the numix themes and the unity tweak tool
-#sudo add-apt-repository ppa:numix/ppa
-#sudo apt-get update
-#sudo apt-get install numix-gtk-theme numix-icon-theme-circle 
-#unity-tweak-tool
+sudo add-apt-repository ppa:numix/ppa
+sudo apt-get update
+sudo apt-get install numix-gtk-theme numix-icon-theme-circle
+sudo apt install unity-tweak-tool
 
 #then using the unity tweak tool set up the themes you want
 
 #core necessary python packages
-#sudo apt-get install python-numpy python-matplotlib
+sudo apt install python3-pip
+sudo pip3 install virtualenv virtualenvwrapper
+# http://docs.python-guide.org/en/latest/dev/virtualenvs/ for virtualenvwrapper setup
+# see here for info on setting up jupyter notebook with virtualenvs
+# http://anbasile.github.io/programming/2017/06/25/jupyter-venv/
 
 #make the filesystem that I like
 #rmdir Documents/ Music/ Pictures/ Public/ Templates/ Videos/
@@ -60,11 +64,15 @@ git config --global credential.helper 'cache --timeout=3600'
 # installing TexLive
 #sudo add-apt-repository ppa:texlive-backports/ppa
 #sudo apt-get update
-#sudo apt-get texlive-full texworks
+#sudo apt install texlive-full texworks
 # ensuring that there is a us english dictionary working
 #sudo ln -s /usr/share/hunspell/en_US.dic /usr/share/myspell/dicts/
 #sudo ln -s /usr/share/hunspell/en_US.aff /usr/share/myspell/dicts/
 
+
+# great tool for install a tiny little latex equation editor
+# see here https://klatexformula.sourceforge.io/
+sudo apt install klatexformula
 #setting up inkscape
 #sudo apt-get install inkscape
 
@@ -105,8 +113,8 @@ git config --global credential.helper 'cache --timeout=3600'
 #sudo apt-get install libfreeimage3 libfreeimage-dev
 
 #get the bit that allows the git prompt for bash
-#curl 
-#https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh 
+#curl
+#https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 #-o ~/.git-prompt.sh
 #then add the following lines to bashrc
 #. ~/.git-prompt.sh
