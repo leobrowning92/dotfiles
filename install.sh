@@ -128,3 +128,7 @@ sudo apt install klatexformula
 #add the following lines
 #eval $(thefuck --alias)
 #source ~/.bashrc
+
+
+# useful little programmes
+sudo apt install tree tldr
