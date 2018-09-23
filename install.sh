@@ -26,8 +26,8 @@ sudo pip3 install virtualenv virtualenvwrapper
 # http://anbasile.github.io/programming/2017/06/25/jupyter-venv/
 
 #make the filesystem that I like
-#rmdir Documents/ Music/ Pictures/ Public/ Templates/ Videos/
-#mkdir gitrepos drive
+# rmdir Documents/ Music/ Pictures/ Public/ Templates/ Videos/
+# mkdir gitrepos drive
 
 #download the 14.04 insync .deb package from their website
 #cd Downloads
@@ -62,9 +62,7 @@ git config --global credential.helper 'cache --timeout=3600'
 
 
 # installing TexLive
-#sudo add-apt-repository ppa:texlive-backports/ppa
-#sudo apt-get update
-#sudo apt install texlive-full texworks
+sudo apt install texlive-full texworks
 # ensuring that there is a us english dictionary working
 #sudo ln -s /usr/share/hunspell/en_US.dic /usr/share/myspell/dicts/
 #sudo ln -s /usr/share/hunspell/en_US.aff /usr/share/myspell/dicts/
