@@ -13,17 +13,19 @@ genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 
 pacman -S grub sudo
-EDITOR=nano visudo and uncomment %wheel ALL=(ALL) ALL
+EDITOR=nano visudo
+# and uncomment %wheel ALL=(ALL) ALL
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 rm /etc/localtime #this step is not in the guide, but localtime seems corrupted so need to rm in first
 ln -s /usr/share/zoneinfo/Pacific/Auckland /etc/localtime
 hwclock --systohc
-nano /etc/locale.gen # then uncomment the two lines nz_US.UTF-8 UTF-8 and en_US.UTF-8 UTF-8
+nano /etc/locale.gen
+# then uncomment the two lines nz_US.UTF-8 UTF-8 and en_US.UTF-8 UTF-8
 locale-gen
 nano /etc/locale.conf # then type LANG=en_US.UTF-8 on the first line
-nano /etc/hostname # type the computer name in the first line
+nano /etc/hostname # type the computer name in the firstexit line
 passwd #sets passwd for root
 exit #exits chroot and goes to root
 reboot
@@ -40,7 +42,36 @@ passwd leo #then add a password to that user
 #at this point we have a working arch install, but with nothing on it yet.
 #login as leo
 sudo pacman -Syu
-pacman -S bash-completion
+pacman -S bash-completion git tldr tree base-devel
+
+
+
+# option using https://arcolinuxd.com/7-the-actual-installation-of-arch-linux-phase-3
+sudo pacman -S xorg-server xorg-apps xorg-xinit xterm
+startx
+# check that a session starts type exit to get out.
+# install a display manager. we choose lightdm
+sudo pacman -S lightdm{,-gtk-greeter,-gtk-greeter-settings}
+
+# get yaourt https://arcolinuxd.com/6-the-actual-installation-of-arch-linux-phase-2/
+nano /etc/pacman.conf
+# add the following lines:
+[arcolinux_repo_iso]
+SigLevel = Never
+Server = https://arcolinux.github.io/arcolinux_repo_iso/$arch
+#run:
+pacman -Sy
+pacman -S yaourt package-query
+#then remove the lines from /etc/pacman.conf
+
+
+
+
+
+
+
+
+
 
 #when installing the virtualbox-guest-utils there is an option ofr available providers. select 2), which
 #is the virtualbox-guest-modules-arch
@@ -53,7 +84,7 @@ sudo pacman -S xfce4
 #edit .xinitrc so that the executed line reads "exec startxfce4"
 #use startx to start xfce4 graphical interface
 
-sudo pacman -S  numix-gtk-theme base-devel atom midori git
+sudo pacman -S  numix-gtk-theme atom midori
 
 git clone https://github.com/leobrowning92.dotfiles.git
 #then run the atom install script to get packages from apm
