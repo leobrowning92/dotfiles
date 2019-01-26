@@ -1,9 +1,10 @@
 - hosts: localhost
-    become: true
-    tasks:
-    - name: Install basic packages
-        apt: name={{item}}
-        with_items:
-            - tldr
-            - git
-            - tree
+  become: true
+  tasks:
+  - name: Install basic packages
+    apt: name={{item}}
+    with_items:
+      - tldr
+      - git
+      - tree
+      - htop
