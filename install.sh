@@ -62,7 +62,7 @@ git config --global credential.helper 'cache --timeout=3600'
 
 
 # installing TexLive
-sudo apt install texlive-full texworks
+#sudo apt install texlive-full texworks
 # ensuring that there is a us english dictionary working
 #sudo ln -s /usr/share/hunspell/en_US.dic /usr/share/myspell/dicts/
 #sudo ln -s /usr/share/hunspell/en_US.aff /usr/share/myspell/dicts/
@@ -70,7 +70,7 @@ sudo apt install texlive-full texworks
 
 # great tool for install a tiny little latex equation editor
 # see here https://klatexformula.sourceforge.io/
-sudo apt install klatexformula
+#sudo apt install klatexformula
 #setting up inkscape
 #sudo apt-get install inkscape
 
@@ -129,4 +129,4 @@ sudo apt install klatexformula
 
 
 # useful little programmes
-sudo apt install tree tldr
+#sudo apt install tree tldr

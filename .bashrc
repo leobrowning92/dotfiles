@@ -65,7 +65,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1 #	% if there are untracked files.
 #export GIT_PS1_SHOWUPSTREAM=1 #<,>,<> behind, ahead, or diverged from upstream.
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\u\[\033[1;31m\]@\[\033[1;97m\]\h\[\033[00m\]:\[\033[1;34m\]\w\[\033[00m\]\[\e[38;5;216m\]$(__git_ps1 " (%s)")\[\033[00m\]$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\u@\h\[\033[00m\]:\[\033[1;34m\]\w\[\033[00m\]\[\e[38;5;216m\]$(__git_ps1 " (%s)")\[\033[00m\]$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -126,7 +126,7 @@ fi
 export PATH=$PATH:~/.local/bin
 
 # manually added for virtualenvwrapper
-# VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3' # This needs to be placed
-# export WORKON_HOME=$HOME/.virtualenvs
-# export PROJECT_HOME=$HOME/Devel
-# source /usr/local/bin/virtualenvwrapper.sh
+VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3' # This needs to be placed
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
