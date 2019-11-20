@@ -8,6 +8,6 @@ apm install markdown-pdf
 #atom packages for latex functionality
 #apm install latex language-latex pdf-view latexer
 #atom packages for python functionality
-apm install python-tools autocomplete-python
+# apm install python-tools autocomplete-python
 # packages for minimap and
 apm install minimap-find-and-replace minimap-git-diff  highlight-selected minimap-highlight-selected
