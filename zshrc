@@ -145,3 +145,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 conda activate py37
+
+source /Users/leo.browning/Library/Preferences/org.dystroy.broot/launcher/bash/br
+export EDITOR=nano

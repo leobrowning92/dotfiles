@@ -1,1 +1,2 @@
-.ipynb*
+.ipynb* # jupyter notebook checkpoints
+.idea/ # pycharm project folders
