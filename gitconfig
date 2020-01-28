@@ -5,7 +5,8 @@
 [credential]
 	helper = cache --timeout 4320000
 [core]
-	excludesfile = /home/leo/.gitignore_global
+	excludesfile = /Users/leo.browning/.gitignore_global
+	pager = less -F -X
 [alias]
 lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 lg = !"git lg1"
