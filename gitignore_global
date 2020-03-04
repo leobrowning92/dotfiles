@@ -1,2 +1,4 @@
 .ipynb* # jupyter notebook checkpoints
 .idea/ # pycharm project folders
+.idea/
+.DS_Store
