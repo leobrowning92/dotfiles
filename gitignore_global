@@ -2,3 +2,4 @@
 .idea/ # pycharm project folders
 .idea/
 .DS_Store
+.ipynb_checkpoints/
